@@ -1,3 +1,0 @@
-E:\Unreal\TeamProjectMechanics\TeamMechanics\Source\TeamMechanics\TeamMechanics.Build.cs
-E:\Unreal\TeamProjectMechanics\TeamMechanics\Source\TeamMechanics.Target.cs
-E:\Unreal\TeamProjectMechanics\TeamMechanics\Source\TeamMechanicsEditor.Target.cs

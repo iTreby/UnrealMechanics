@@ -1,6 +1,9 @@
 # Visual Studio 2015 user specific files
 .vs/
 
+# Visual Studio 2015 database file
+*.VC.db
+
 # Compiled Object files
 *.slo
 *.lo
@@ -72,3 +75,36 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+
+TeamMechanics/Saved/Logs/
+
+
+
+TeamMechanics/Intermediate/AssetRegistryCache/
+
+
+
+*.bin
+
+
+
+*.log
+
+
+
+*.ini
+
+
+
+*.png
+
+
+
+*.json
+
+
+TeamMechanics/Saved/*
+
+TeamMechanics/Intermediate/*
+
