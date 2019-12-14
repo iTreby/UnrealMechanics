@@ -108,3 +108,8 @@ TeamMechanics/Saved/*
 
 TeamMechanics/Intermediate/*
 
+TeamMechanics/cmake-build-debug/*
+
+TeamMechanics/.idea/*
+
+.idea/*
