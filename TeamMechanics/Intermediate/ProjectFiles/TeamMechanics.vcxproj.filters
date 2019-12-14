@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\TeamMechanics.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{2A37B9C7-1E60-405F-8A1A-67348D686064}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TeamMechanics.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\TeamMechanicsEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{A43AE8AB-BF40-4306-898A-8A728562A8B5}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\TeamMechanics">
+      <UniqueIdentifier>{56ED0557-1D91-42AC-BE45-783E6C1BE099}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TeamMechanics\TeamMechanics.Build.cs">
+      <Filter>Source\TeamMechanics</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\TeamMechanics\TeamMechanics.cpp">
+      <Filter>Source\TeamMechanics</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamMechanics\TeamMechanics.h">
+      <Filter>Source\TeamMechanics</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamMechanics\TeamMechanicsCharacter.cpp">
+      <Filter>Source\TeamMechanics</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamMechanics\TeamMechanicsCharacter.h">
+      <Filter>Source\TeamMechanics</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamMechanics\TeamMechanicsGameMode.cpp">
+      <Filter>Source\TeamMechanics</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamMechanics\TeamMechanicsGameMode.h">
+      <Filter>Source\TeamMechanics</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamMechanics\TeamMechanicsHUD.cpp">
+      <Filter>Source\TeamMechanics</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamMechanics\TeamMechanicsHUD.h">
+      <Filter>Source\TeamMechanics</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamMechanics\TeamMechanicsProjectile.cpp">
+      <Filter>Source\TeamMechanics</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamMechanics\TeamMechanicsProjectile.h">
+      <Filter>Source\TeamMechanics</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
