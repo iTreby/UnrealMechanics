@@ -1,2 +1,0 @@
-E:\Unreal\TeamProjectMechanics\TeamMechanics\Intermediate\Build\Win64\UE4Editor\Development\TeamMechanics\Definitions.TeamMechanics.h
-e:\unreal\teamprojectmechanics\teammechanics\source\teammechanics\TeamMechanics.h
