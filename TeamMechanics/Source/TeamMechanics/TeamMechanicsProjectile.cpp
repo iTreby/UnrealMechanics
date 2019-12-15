@@ -3,6 +3,7 @@
 #include "TeamMechanicsProjectile.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/SphereComponent.h"
+#include "EnemyParent.h"
 
 ATeamMechanicsProjectile::ATeamMechanicsProjectile() 
 {
@@ -36,6 +37,18 @@ void ATeamMechanicsProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* Other
 	// Only add impulse and destroy projectile if we hit a physics
 	if ((OtherActor != NULL) && (OtherActor != this) && (OtherComp != NULL) && OtherComp->IsSimulatingPhysics())
 	{
+//	    // Apply damage on enemy
+//	    auto enemy = Cast<AEnemyParent>(OtherActor);
+//
+//	    if (enemy) {
+//	        // double damage when head shot an enemy
+//	        if (enemy->isHeadShot) {
+//                enemy->HP -= enemy->damageWhenHit * 2;
+//            } else {
+//                enemy->HP -= enemy->damageWhenHit;
+//            }
+//	    }
+
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
 
 		Destroy();

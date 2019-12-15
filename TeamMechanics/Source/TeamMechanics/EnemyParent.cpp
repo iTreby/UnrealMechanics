@@ -17,18 +17,19 @@ AEnemyParent::AEnemyParent()
 
     HeadMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("HeadMesh"));
     HeadMesh->SetupAttachment(RootComponent);
+    HeadMesh->SetCollisionProfileName("HeadShot");
 
     HeadShotBox = CreateDefaultSubobject<UBoxComponent>(TEXT("HeadShotBox"));
+    HeadShotBox->InitBoxExtent(FVector(60,60,60)); // set size of the collision
+    HeadShotBox->SetCollisionProfileName("HeadShotBoxTrigger");
     HeadShotBox->SetupAttachment(HeadMesh);
-
-    HeadShotBox->OnComponentBeginOverlap.AddDynamic(this, &AEnemyParent::OnOverlapBegin);
 }
 
 // Called when the game starts or when spawned
 void AEnemyParent::BeginPlay()
 {
 	Super::BeginPlay();
-	
+    HeadShotBox->OnComponentHit.AddDynamic(this, &AEnemyParent::OnHit);
 }
 
 // Called every frame
@@ -50,30 +51,17 @@ void AEnemyParent::NotifyHit (
 ) {
     auto projectile = Cast<ATeamMechanicsProjectile>(Other);
     if (!projectile) { return ;}
-
-    HP -= 0.1;
-    isHit = true;
     GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Black, FString::Printf(TEXT("Enemy::HP: %f"), HP));
-
     if (HP <= 0) {
         Destroy();
     }
 }
 
-void AEnemyParent::OnOverlapBegin(
-        UPrimitiveComponent* OverlappedComp,
-        AActor* OtherActor,
-        UPrimitiveComponent* OtherComp,
-        int32 OtherBodyIndex,
-        bool bFromSweep,
-        const FHitResult& SweepResul)
-{
+void AEnemyParent::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit) {
     auto projectile = Cast<ATeamMechanicsProjectile>(OtherActor);
-    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Enemy::OnOverlapBegin"));
-
     if (!projectile) { return; }
-
+    isHeadShot = true;
     GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Enemy::Head shot enemy"));
-
 }
+
 
