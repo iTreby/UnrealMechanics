@@ -49,13 +49,13 @@ public:
 	ATeamMechanicsCharacter();
 
 	UPROPERTY(EditAnywhere)
-		TSubclassOf<class UPlayerHPWidget> WidgetClass;
+	TSubclassOf<class UPlayerHPWidget> WidgetClass;
 
 	UPROPERTY(BlueprintReadOnly)
-		float Shield = 1.0f;
+	float Shield = 1.0f;
 
-	UPROPERTY(BlueprintReadOnly)
-		float HP = 1.0f;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	float HP = 1.0f;
 
 protected:
 	virtual void BeginPlay();
@@ -90,6 +90,8 @@ public:
 	uint32 bUsingMotionControllers : 1;
 
 protected:
+	/** Equip a new weapon. */
+//	void OnEquipWeapon();
 	
 	/** Fires a projectile. */
 	void OnFire();
