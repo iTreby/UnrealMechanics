@@ -48,6 +48,15 @@ class ATeamMechanicsCharacter : public ACharacter
 public:
 	ATeamMechanicsCharacter();
 
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<class UPlayerHPWidget> WidgetClass;
+
+	UPROPERTY(BlueprintReadOnly)
+		float Shield = 1.0f;
+
+	UPROPERTY(BlueprintReadOnly)
+		float HP = 1.0f;
+
 protected:
 	virtual void BeginPlay();
 

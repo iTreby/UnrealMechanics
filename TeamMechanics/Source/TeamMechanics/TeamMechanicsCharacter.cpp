@@ -3,6 +3,7 @@
 #include "TeamMechanicsCharacter.h"
 #include "TeamMechanicsProjectile.h"
 #include "Animation/AnimInstance.h"
+#include "PlayerHPWidget.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
@@ -88,6 +89,13 @@ void ATeamMechanicsCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+
+    auto widget = CreateWidget<UPlayerHPWidget>(UGameplayStatics::GetPlayerController(this,0), WidgetClass);
+	widget->Player = this;
+	widget->AddToViewport();
+    
+
+
 
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
 	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
