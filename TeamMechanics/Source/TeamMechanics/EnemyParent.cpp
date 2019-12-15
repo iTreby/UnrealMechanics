@@ -51,21 +51,16 @@ void AEnemyParent::NotifyHit (
 ) {
     auto projectile = Cast<ATeamMechanicsProjectile>(Other);
     if (!projectile) { return ;}
-
-    HP -= 0.1;
-    isHit = true;
     GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Black, FString::Printf(TEXT("Enemy::HP: %f"), HP));
-
     if (HP <= 0) {
         Destroy();
     }
-
 }
 
 void AEnemyParent::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit) {
     auto projectile = Cast<ATeamMechanicsProjectile>(OtherActor);
-    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Enemy::OnHit"));
     if (!projectile) { return; }
+    isHeadShot = true;
     GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Enemy::Head shot enemy"));
 }
 

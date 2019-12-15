@@ -27,11 +27,14 @@ public:
 //    UPROPERTY(VisibleAnywhere)
 //    class UWidgetComponent* HPWidget;
 
-    UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
     float HP = 1.0f;
 
-    UPROPERTY(VisibleAnywhere)
-    bool isHit = false;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+    bool isHeadShot = false;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+    float damageWhenHit = 0.1;
 
 protected:
 	// Called when the game starts or when spawned

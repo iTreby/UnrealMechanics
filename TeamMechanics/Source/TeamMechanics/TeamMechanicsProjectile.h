@@ -19,6 +19,7 @@ class ATeamMechanicsProjectile : public AActor
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
 	class UProjectileMovementComponent* ProjectileMovement;
 
+
 public:
 	ATeamMechanicsProjectile();
 

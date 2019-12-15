@@ -93,8 +93,6 @@ void ATeamMechanicsCharacter::BeginPlay()
     auto widget = CreateWidget<UPlayerHPWidget>(UGameplayStatics::GetPlayerController(this,0), WidgetClass);
 	widget->Player = this;
 	widget->AddToViewport();
-    
-
 
 
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
